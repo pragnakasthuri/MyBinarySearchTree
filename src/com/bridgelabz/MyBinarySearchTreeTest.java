@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 /**
- * Ability to create a BST by adding 56 and then adding 30 and 70
+ * Ability to create a BST by adding the given elements in assignment
  */
 public class MyBinarySearchTreeTest {
 
@@ -29,6 +29,17 @@ public class MyBinarySearchTreeTest {
         myBinarySearchTree.add(56);
         myBinarySearchTree.add(30);
         myBinarySearchTree.add(70);
+        myBinarySearchTree.add(22);
+        myBinarySearchTree.add(40);
+        myBinarySearchTree.add(60);
+        myBinarySearchTree.add(95);
+        myBinarySearchTree.add(11);
+        myBinarySearchTree.add(65);
+        myBinarySearchTree.add(3);
+        myBinarySearchTree.add(16);
+        myBinarySearchTree.add(63);
+        myBinarySearchTree.add(67);
+
 
         /**
          * 3.Calling inOrderTraversal method to print the tree in sorted order
