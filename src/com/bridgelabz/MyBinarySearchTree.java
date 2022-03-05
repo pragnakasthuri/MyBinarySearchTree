@@ -54,7 +54,7 @@ public class MyBinarySearchTree<K extends Comparable<K>> {
     }
 
     /**
-     * getSize method is to find the size of the tree using recur
+     * getSize method is to find the size of the tree using recursively
      * @return the size of the tree
      */
     public int getSize() {
@@ -68,5 +68,21 @@ public class MyBinarySearchTree<K extends Comparable<K>> {
      */
     private int getRecursiveSize(MyBinaryNode<K> currentRootNode) {
         return currentRootNode == null ? 0 :1 + this.getRecursiveSize(currentRootNode.left) + this.getRecursiveSize(currentRootNode.right);
+    }
+  
+    /**
+     * This method is to search for a given key in BST using recursive approach
+     * @param rootNode root node of the tree
+     * @param key key to search
+     * @return search key node otherwise null
+     */
+    public MyBinaryNode<K> search(MyBinaryNode<K> rootNode, K key) {
+        if (rootNode==null || rootNode.key.compareTo(key) == 0)
+            return rootNode;
+
+        if (rootNode.key.compareTo(key) < 0)
+            return search(rootNode.right, key);
+
+        return search(rootNode.left, key);
     }
 }

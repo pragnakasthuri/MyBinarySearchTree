@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 /**
- * Ability to create a BST by adding 56 and then adding 30 and 70
+ * Ability to search 63 in the binary tree
  */
 public class MyBinarySearchTreeTest {
 
@@ -16,6 +16,7 @@ public class MyBinarySearchTreeTest {
          * 2.Adding nodes to Binary Tree
          * 3.Calling inOrderTraversal method to print the tree in sorted order
          * 4.Calling the getSize method to print the size of the tree
+         * 5.Searching for a key 16 in given BST
          */
 
         /**
@@ -29,6 +30,16 @@ public class MyBinarySearchTreeTest {
         myBinarySearchTree.add(56);
         myBinarySearchTree.add(30);
         myBinarySearchTree.add(70);
+        myBinarySearchTree.add(22);
+        myBinarySearchTree.add(40);
+        myBinarySearchTree.add(60);
+        myBinarySearchTree.add(95);
+        myBinarySearchTree.add(11);
+        myBinarySearchTree.add(65);
+        myBinarySearchTree.add(3);
+        myBinarySearchTree.add(16);
+        myBinarySearchTree.add(63);
+        myBinarySearchTree.add(67);
 
         /**
          * 3.Calling inOrderTraversal method to print the tree in sorted order
@@ -40,5 +51,11 @@ public class MyBinarySearchTreeTest {
          * 4.Calling the getSize method to print the size of the tree
          */
         System.out.println("Size Of My Binary Tree: " +myBinarySearchTree.getSize());
+
+        /**
+         * 5. Searching for a key 63 in the BST
+         */
+        MyBinaryNode searchNode = myBinarySearchTree.search(myBinarySearchTree.root, 63);
+        System.out.println("Given key is found in BST: "+ (searchNode == null ? false : true));
     }
 }
